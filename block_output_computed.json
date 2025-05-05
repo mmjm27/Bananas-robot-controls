@@ -30,7 +30,7 @@
     "floor": 1,
     "steps_backward": 0,
     "target_xy": [
-      292.27,
+      210.27,
       -45.03
     ],
     "base_angle": -90
@@ -42,7 +42,7 @@
     "floor": 1,
     "steps_backward": 6,
     "target_xy": [
-      292.27,
+      210.27,
       -45.03
     ],
     "base_angle": -90
@@ -78,7 +78,7 @@
     "floor": 2,
     "steps_backward": 0,
     "target_xy": [
-      292.27,
+      210.27,
       -7.03
     ],
     "base_angle": -90
@@ -90,7 +90,7 @@
     "floor": 2,
     "steps_backward": 6,
     "target_xy": [
-      292.27,
+      210.27,
       -7.03
     ],
     "base_angle": -90
