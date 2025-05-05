@@ -6,7 +6,7 @@ This project implements a fully automated stacking system for blocks using a rob
 
 ```
 ├── demo.py                    # Main automation logic for robot stacking
-├── Remotecontrol.py           # Manual GUI for robot arm positioning
+├── Remotecontrol.py           # Simple manual GUI for robot arm positioning, and other controls
 ├── IKsolver.py                # CCD-based inverse kinematics solver
 ├── Sender.py                  # TCP communication with robot hardware
 ├── robot_config.py            # Arm limits, segment lengths, base angle
@@ -17,6 +17,29 @@ This project implements a fully automated stacking system for blocks using a rob
 ```
 
 ##  How It Works
+
+### `Remotecontrol.py`
+
+The `Remotecontrol.py` script provides a simple graphical user interface for remotely controlling the robot arm. Its main features include:
+
+1. **TCP Connection**  
+   Establishes a TCP connection to the robot on **port 5001** by default.  
+   ⚠️ **Important:** You must manually update the target IP address on **line 13** of the script to match the robot's IP, which is displayed on the rear LCD screen.
+
+2. **Graphical Arm Visualization**  
+   Renders a graphical representation of the robot arm.
+
+3. **Interactive Positioning**  
+   On mouse click, the program calculates the inverse kinematics needed to reach the clicked position and determines the appropriate joint angles.
+
+4. **Command Transmission**  
+   Sends the updated arm position to the robot using a text-based TCP interface.
+
+5. **Basic Motion Controls**  
+   Provides simple movement commands (e.g., forward, backward). Key bindings and control instructions are shown within the GUI.
+
+6. **Graceful Termination**  
+   Pressing **ESC** or closing the window cleanly terminates the TCP connection and exits the program.
 
 ###  `demo.py`
 1. Starts TCP connection to robot.
